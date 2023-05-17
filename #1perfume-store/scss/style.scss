@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Montserrat:ital,wght@0,700;1,400&&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 600px;
+}
+
+body {
+  height: 100vh;
+  font-family: Fraunces;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    column-gap: 40px;
+    .left {
+      img {
+        max-width: 300px;
+        max-height: 450px;
+      }
+      img.mobile{
+        display: none;
+      }
+    }
+    .right {
+      .right-head {
+        font-family: Montserrat;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 5px;
+        color: #6c7289;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+      }
+      .right-title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 32px;
+        color: #1c232b;
+      }
+      .right-text {
+        padding: 24px 0 29px 0;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 23px;
+        line-height: 135%;
+        color: #6c7289;
+      }
+      .right-price {
+        display: flex;
+        align-items: center;
+        column-gap: 19px;
+        padding-bottom: 30px;
+        .right-price_real {
+          font-weight: 900;
+          font-size: 32px;
+          line-height: 32px;
+          color: #3d8168;
+        }
+        .right-price_discount {
+          font-family: Montserrat;
+          font-size: 13px;
+          line-height: 23px;
+          color: #6c7289;
+          text-decoration: line-through;
+            }
+        }
+        .btn {
+        width: 236px;
+        height: 48px;
+        border-radius: 8px;
+        background-color: #3d8168;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 12px;
+        border: 0;
+        p {
+            font-family: Montserrat;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        }
+        .btn:hover {
+        cursor: pointer;
+        background-color: #1a4032;
+        }
+    }
+  }
+}
+
+//  Mobile version
+
+@media (max-width: 630px) {
+  body {
+    padding-top: 40px;
+    align-items: flex-start;
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+    .left {
+        img {
+            display: none;
+        }
+        img.mobile{
+            display: block;
+        }
+      }
+      .right{
+        padding-top: 20px;
+        width: 80%;
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .btn{
+            width: 90%;
+            margin-left: 15px;
+        }
+      }
+    }
+  }
+}
